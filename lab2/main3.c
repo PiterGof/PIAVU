@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <conio.h>
 #define size 8
@@ -11,12 +10,14 @@ int main(void)
 	for (int i = 0;i < size;i++)
 	{
 		if (mx < M[i])
+		{
 			mx = M[i];
-	}
-	for (int i = 0;i < size;i++)
-	{
-		if (M[i] < min)
+		}
+
+		else if (M[i] < min)
+		{
 			min = M[i];
+		}
 	}
 
 	int k = 0;
@@ -44,5 +45,3 @@ int main(void)
 	printf("\nk = %i", k);
 	return 0;
 }
-
-
