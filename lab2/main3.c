@@ -5,13 +5,13 @@
 int main(void)
 {
 	int M[size] = { 10, 2, 10, 8, 10, 8, 7, 6};
-	int mx = M[0], min = M[0];
-	int index;
+	int max = M[0], min = M[0];
+	int maxIndex;
 	for (int i = 0;i < size;i++)
 	{
-		if (mx < M[i])
+		if (max < M[i])
 		{
-			mx = M[i];
+			max = M[i];
 		}
 
 		else if (M[i] < min)
@@ -23,7 +23,7 @@ int main(void)
 	int k = 0;
 	for (int i = 0;i < size;i++)
 	{
-		if (M[i] != mx)
+		if (M[i] != max)
 		{
 			M[k++] = M[i];
 		}
@@ -32,11 +32,11 @@ int main(void)
 			index = i;
 		}
 	}
-	for (int i = index + 2;i >= index;i--)
+	for (int i = maxIndex + 2;i >= maxIndex;i--)
 	{
 		M[i + 1] = M[i];
 	}
-	M[index] = min;
+	M[maxIndex] = min;
 
 	for (int i = 0;i < k+1;i++)
 	{
