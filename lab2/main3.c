@@ -29,10 +29,10 @@ int main(void)
 		}
 		else
 		{
-			index = i;
+			maxIndex = i;
 		}
 	}
-	for (int i = maxIndex + 2;i >= maxIndex;i--)
+	for (int i = maxIndex;i >= maxIndex;i--)
 	{
 		M[i + 1] = M[i];
 	}
